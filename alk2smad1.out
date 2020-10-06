@@ -1,0 +1,131 @@
+-I: Adding /home/biofisica2020/amber20/amber20_src/dat/leap/prep to search path.
+-I: Adding /home/biofisica2020/amber20/amber20_src/dat/leap/lib to search path.
+-I: Adding /home/biofisica2020/amber20/amber20_src/dat/leap/parm to search path.
+-I: Adding /home/biofisica2020/amber20/amber20_src/dat/leap/cmd to search path.
+-s: Ignoring startup file: leaprc
+-f: Source alk2smad1.in.
+
+Welcome to LEaP!
+Sourcing: ./alk2smad1.in
+----- Source: /home/biofisica2020/amber20/amber20_src/dat/leap/cmd/leaprc.protein.ff14SB
+----- Source of /home/biofisica2020/amber20/amber20_src/dat/leap/cmd/leaprc.protein.ff14SB done
+Log file: ./leap.log
+Loading parameters: /home/biofisica2020/amber20/amber20_src/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /home/biofisica2020/amber20/amber20_src/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /home/biofisica2020/amber20/amber20_src/dat/leap/lib/amino12.lib
+Loading library: /home/biofisica2020/amber20/amber20_src/dat/leap/lib/aminoct12.lib
+Loading library: /home/biofisica2020/amber20/amber20_src/dat/leap/lib/aminont12.lib
+----- Source: /home/biofisica2020/amber20/amber20_src/dat/leap/cmd/leaprc.phosaa10
+----- Source of /home/biofisica2020/amber20/amber20_src/dat/leap/cmd/leaprc.phosaa10 done
+Log file: ./leap.log
+Loading parameters: /home/biofisica2020/amber20/amber20_src/dat/leap/parm/frcmod.phosaa10
+Reading force field modification type file (frcmod)
+Reading title:
+Bonded parameters and revised vdW parameters for phosphorylated amino acids.
+Loading library: /home/biofisica2020/amber20/amber20_src/dat/leap/lib/phos_amino94.lib
+----- Source: /home/biofisica2020/amber20/amber20_src/dat/leap/cmd/leaprc.water.spce
+----- Source of /home/biofisica2020/amber20/amber20_src/dat/leap/cmd/leaprc.water.spce done
+Loading library: /home/biofisica2020/amber20/amber20_src/dat/leap/lib/atomic_ions.lib
+Loading library: /home/biofisica2020/amber20/amber20_src/dat/leap/lib/solvents.lib
+Loading parameters: /home/biofisica2020/amber20/amber20_src/dat/leap/parm/frcmod.spce
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for SPC/E water
+Loading parameters: /home/biofisica2020/amber20/amber20_src/dat/leap/parm/frcmod.ionsjc_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and SPC/E water from Joung & Cheatham JPCB (2008)
+Loading parameters: /home/biofisica2020/amber20/amber20_src/dat/leap/parm/frcmod.ions234lm_126_spce
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for SPC/E water model (12-6 normal usage set)
+Loading Prep file: ./atp.prep
+Loading parameters: ./atp.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+#  Modifications to the AMBER94 force field for polyphosphates
+Loading library: ./po3.off
+Loading parameters: ./po3.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+# Parameters for SER-PO3 : S2P; N.Homeyer, A.H.C.Horn, H.Lanig, H.Sticht, J. Mol. Model., in press
+Loading PDB file: ./alk2_smad1_final.pdb
+ (starting new molecule for chain D)
+  total atoms in file: 8316
+  Solute vdw bounding box:              63.245 53.388 81.393
+  Total bounding box for atom centers:  87.245 77.388 105.393
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   90.546 80.746 108.384 angstroms.
+  Volume: 792420.366 A^3 
+  Total mass 398472.969 amu,  Density 0.835 g/cc
+  Added 18786 residues.
+4 Na+ ions required to neutralize.
+Adding 4 counter ions to "mol" using 1A grid
+Grid extends from solute vdw + 1.21  to  7.31
+Resolution:      1.00 Angstrom.
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+(Replacing solvent molecule)
+Placed Na+ in mol at (-26.30, 11.07, 3.80).
+(No solvent overlap)
+Placed Na+ in mol at (-28.01, 11.20, -2.70).
+(No solvent overlap)
+Placed Na+ in mol at (-17.01, 11.20, 4.30).
+(No solvent overlap)
+Placed Na+ in mol at (-0.01, -6.80, -3.70).
+
+Done adding ions.
+Writing pdb file: alk2smad1_solv.pdb
+   printing CRYST1 record to PDB file with box info
+
+/home/biofisica2020/amber20/amber20_src/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NSER -> SER
+
+/home/biofisica2020/amber20/amber20_src/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CASP -> ASP
+
+/home/biofisica2020/amber20/amber20_src/bin/teLeap: Warning!
+ Converting N-terminal residue name to PDB format: NLYS -> LYS
+
+/home/biofisica2020/amber20/amber20_src/bin/teLeap: Warning!
+ Converting C-terminal residue name to PDB format: CSER -> SER
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <atp 524>:  C8   C4   N9   C1* 
+ <atp 524>:  C6   H60  N6   H61 
+ <atp 524>:  N7   N9   C8   H80 
+ <atp 524>:  N1   N3   C2   H2  
+ <atp 524>:  C5   N1   C6   N6  
+ total 1727 improper torsions applied
+ 5 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CASP	1
+	CSER	1
+	NLYS	1
+	NSER	1
+	WAT	18785
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 4; Notes = 0.
